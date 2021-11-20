@@ -11,5 +11,5 @@ jobs:
         id: "set-vars"
         run: |
           echo ${{ github.event }}
-          echo ${{ github.event.head_commit.message }}
+          echo ${{ github.event.commits[0].message }}
           echo $(echo "$GITHUB_REF" | awk -F / '{print $3}')
